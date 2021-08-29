@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
-import NavBar from './components/NavBar';
+import Navigation from './components/Navigation';
 import Home from './components/pages/Home';
 import Experience from './components/pages/Experience';
 import Projects from './components/pages/Projects';
@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <>
-        <NavBar/>
+        <Navigation/>
         <Switch>
           <Container>
             <Route exact path='/' component={Home}/>
