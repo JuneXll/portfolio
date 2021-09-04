@@ -7,3 +7,5 @@ const ProjectCard = ()=>{
 }
 
 export default ProjectCard;
+
+// event listener onMouseOver...set on hover for cards
