@@ -11,10 +11,10 @@ import Sidebar from './components/Sidebar';
 function App() {
   return (
     <Router>
-      <>
-        <Sidebar/>
+      <div className='d-flex'>
+        <Sidebar className='col'/>
         <Switch>
-          <Container>
+          <Container fluid className='col'>
             <Route exact path='/' component={Home}/>
             <Route exact path='/tech' component={Tech}/>
             <Route exact path='/projects' component={Projects}/>
@@ -23,7 +23,7 @@ function App() {
           <Route render={()=><h1 className='display-2'>Oops! Wrong Page!</h1>}/>
         </Switch>
         <Footer/>
-      </>
+      </div>
     </Router>
   );
 }
