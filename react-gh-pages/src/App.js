@@ -14,7 +14,7 @@ function App() {
       <div className='d-flex'>
         <Sidebar className='col'/>
         <Switch>
-          <Container fluid className='col'>
+          <Container fluid className='col' style={{overflow:'scroll'}}>
             <Route exact path='/' component={Home}/>
             <Route exact path='/tech' component={Tech}/>
             <Route exact path='/projects' component={Projects}/>
