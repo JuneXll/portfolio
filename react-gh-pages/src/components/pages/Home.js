@@ -10,7 +10,7 @@ const Home = ()=>{
 
                 <Image className='col mb-3 img-thumbnail' style={{width:'325px',height:'325px'}} src={pic} roundedCircle/>
 
-                <CDBAnimation type='pulse' count='5'>
+                <CDBAnimation type='pulse' count='3'>
                     <h1 className='mb-3'>Hi there, I'm June.</h1>
                 </CDBAnimation>
             
