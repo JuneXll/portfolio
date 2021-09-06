@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Image } from 'react-bootstrap';
+import { Container, Image, Button } from 'react-bootstrap';
 import pic from '../../images/profile-pic.JPG';
-import { CDBAnimation } from 'cdbreact';
+import { CDBAnimation } from "cdbreact";
 
 const Home = ()=>{
     return(
@@ -15,6 +15,8 @@ const Home = ()=>{
                 </CDBAnimation>
             
                 <p className='px-5' style={{textIndent:'15px'}}>I am a Miami based Web Developer. As a novice developer, I am continuously learning new techniques to sharpen my skills. I strive for quality and excellence. I enjoy providing structure and order to all of my projects and maximizing user experience. Working on a team is always a rewarding endeavor, but I am definitely not afraid to get down to the nitty gritty and work on projects independently.</p>
+
+                <Button variant='outline-secondary' size='sm'><i class="fas fa-file-download"></i> Download my Resume</Button>
             </main>
         </Container>
     )

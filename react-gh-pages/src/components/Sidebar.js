@@ -2,7 +2,7 @@ import React from 'react';
 import {
   CDBSidebar,
   CDBSidebarContent,
-  CDBSidebarFooter,
+  // CDBSidebarFooter,
   CDBSidebarHeader,
   CDBSidebarMenu,
   CDBSidebarMenuItem,
@@ -44,7 +44,7 @@ const Sidebar = () => {
           </CDBSidebarMenu>
         </CDBSidebarContent>
 
-        <CDBSidebarFooter style={{ textAlign: 'center' }}>
+        {/* <CDBSidebarFooter style={{ textAlign: 'center' }}>
           <div
             style={{
               padding: '20px 5px',
@@ -52,58 +52,10 @@ const Sidebar = () => {
           >
             JH
           </div>
-        </CDBSidebarFooter>
+        </CDBSidebarFooter> */}
       </CDBSidebar>
     </div>
   );
 };
 
 export default Sidebar;
-
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { Navbar, Nav } from 'react-bootstrap';
-// import Home from './pages/Home';
-// import Tech from './pages/Tech';
-// import Projects from './pages/Projects';
-// import Contact from './pages/Contact';
-
-// const Sidebar = () => {
-//     return(
-//         <div className='d-flex justify-content-center' style={{width:'75px', borderRight:'solid 2px black', height:'100vh'}}>
-//             <Navbar className='flex-column'>   
-                
-//                 <Nav.Item>
-//                     <Nav.Link as={Link} to={Home}>JH</Nav.Link>
-//                 </Nav.Item>
-               
-//                 <hr style={{color:'black'}}></hr>
-                
-//                 <ul className="nav flex-column mt-5">
-//                     <Nav.Item className='mb-2'>
-//                         <Nav.Link as={Link} to={Home}>
-//                             <i class="fas fa-home"></i>
-//                         </Nav.Link>
-//                     </Nav.Item>
-//                     <Nav.Item className='mb-2'>
-//                         <Nav.Link as={Link} to={Tech}>
-//                             <i class="fas fa-tools"></i>
-//                         </Nav.Link>
-//                     </Nav.Item >
-//                     <Nav.Item className='mb-2'>
-//                         <Nav.Link as={Link} to={Projects}>
-//                             <i class="fas fa-code"></i>
-//                         </Nav.Link>
-//                     </Nav.Item>
-//                     <Nav.Item className='mb-2'>
-//                         <Nav.Link as={Link} to={Contact}>
-//                             <i class="fas fa-id-card"></i>
-//                         </Nav.Link>
-//                     </Nav.Item>
-//                 </ul>
-//             </Navbar>
-//         </div>
-//     )
-// }
-
-// export default Sidebar;

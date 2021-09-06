@@ -1,8 +1,15 @@
 import React from 'react';
+import { Image } from 'react-bootstrap';
+import { CDBMask, CDBView, CDBContainer } from "cdbreact";
 
 const Projects = ()=>{
     return(
-        <h1>projects</h1>
+        <CDBContainer>
+            <CDBView>
+                <Image/>
+                <CDBMask overlay='grey-light'></CDBMask>
+            </CDBView>
+        </CDBContainer>
     )
 }
 

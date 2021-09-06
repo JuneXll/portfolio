@@ -1,8 +1,12 @@
 import React from 'react';
+import IconContainer from '../widget/IconContainer';
 import { Container, Row, Col } from 'react-bootstrap';
 import { CDBAnimation } from 'cdbreact';
 
+//How can i animate the array of icons to go left to right like a carousel?
+
 const Tech = ()=>{
+
     return(
         <Container className='h-100 w-100'>
             <Row style={{margin:'2rem', paddingTop:'1rem'}}>
@@ -56,6 +60,8 @@ const Tech = ()=>{
                     </ul>
                 </Col>
             </Row>
+
+            <IconContainer/>
         </Container>
     )
 }
