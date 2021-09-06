@@ -11,26 +11,26 @@ const Contact = ()=>{
             
                 <Container className='d-flex flex-wrap my-5 justify-content-center'>
                     <Col className='d-flex justify-content-center col-xl-2 col-md-6 my-2'>
-                        <a href='mailto:juniettehernandez@yahoo.com'>
+                        <a href='mailto:juniettehernandez1@gmail.com'>
                             <i className="fas fa-envelope fa-7x" ></i>
                         </a>
                     </Col>
 
                     <Col className='d-flex justify-content-center col-xl-2 col-md-6 my-2'>
                         <a href="https://www.linkedin.com/in/juniettehernandez/" target="_blank" alt='linkedin' rel="noreferrer" >
-                            <i className="fab fa-linkedin fa-7x"></i>
+                            <i className="fab fa-linkedin-in fa-7x"></i>
                         </a>
                     </Col>
 
                     <Col className='d-flex justify-content-center col-xl-2 col-md-6 my-2'>
                         <a href="https://github.com/JuneXll" target="_blank" alt='github' rel="noreferrer" >
-                            <i className="fab fa-github-square fa-7x"></i>
+                            <i className="fab fa-github fa-7x"></i>
                         </a>
                     </Col>
 
                     <Col className='d-flex justify-content-center col-xl-2 col-md-6 my-2'>
                         <a href="https://twitter.com/JunebugXll" target="_blank" alt='twitter' rel="noreferrer" >
-                            <i className="fab fa-twitter-square fa-7x"></i>
+                            <i className="fab fa-twitter fa-7x"></i>
                         </a>
                     </Col>
                 </Container>
