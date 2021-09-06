@@ -28,3 +28,4 @@ const ProjectCard = ()=>{
 export default ProjectCard;
 
 // event listener onMouseOver...set on hover for cards
+//onHover be able to see the opacity with text saying Project Name, short content, pill button 'launch' and 'github'
