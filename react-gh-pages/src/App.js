@@ -14,7 +14,7 @@ function App() {
       <div className='d-flex'>
         <Sidebar className='col'/>
         <Switch>
-          <Container fluid className='col overflow-auto'>
+          <Container fluid className='col overflow-auto p-0'>
             <Route exact path='/' component={Home}/>
             <Route exact path='/react-gh-pages' component={Home}/>
             <Route exact path='/tech' component={Tech}/>

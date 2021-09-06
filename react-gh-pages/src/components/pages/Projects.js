@@ -1,15 +1,12 @@
 import React from 'react';
-import { Image } from 'react-bootstrap';
-import { CDBMask, CDBView, CDBContainer } from "cdbreact";
+import { Container } from 'react-bootstrap';
+import ProjectCard from '../widget/ProjectCard';
 
-const Projects = ()=>{
+const Projects = (i)=>{
     return(
-        <CDBContainer>
-            <CDBView>
-                <Image/>
-                <CDBMask overlay='grey-light'></CDBMask>
-            </CDBView>
-        </CDBContainer>
+        <Container className='h-100 w-100 p-0'>
+            <ProjectCard/>
+        </Container>
     )
 }
 
