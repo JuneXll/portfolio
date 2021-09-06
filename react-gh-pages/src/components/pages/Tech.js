@@ -3,7 +3,6 @@ import IconContainer from '../widget/IconContainer';
 import { Container, Row, Col } from 'react-bootstrap';
 import { CDBAnimation } from 'cdbreact';
 
-//How can i animate the array of icons to go left to right like a carousel?
 
 const Tech = ()=>{
 

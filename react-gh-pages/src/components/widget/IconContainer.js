@@ -1,92 +1,81 @@
- import React, { useState } from 'react';
- import { Button, Collapse } from 'react-bootstrap';
+import React from 'react';
+import { Button } from 'react-bootstrap';
+//  import React, { useState } from 'react';
+//  import { Button, Collapse } from 'react-bootstrap';
+import { CDBAnimation } from 'cdbreact';
+
+// const iconStyle = {
+//     boxShadow: '0 0 15px #00aced',
+//     transition: 'all 0.5s ease'
+// }
  
- const IconContainer = ()=>{
-     //Icons
+const IconContainer = ()=>{
+    //Icons
     const icons = {
         1: {
             name: 'HTML',
-            icon: (<i class="fab fa-html5"></i>)
+            icon: "fab fa-html5"
         },
         2: {
             name: 'CSS',
-            icon: (<i class="fab fa-css3-alt"></i>)
+            icon: "fab fa-css3-alt"
         },
         3: {
             name: 'JavaScript',
-            icon: (<i class="fab fa-js-square"></i>)
+            icon: "fab fa-js-square"
         },
         4: {
             name: 'React',
-            icon: (<i class="fab fa-react"></i>)
+            icon: "fab fa-react"
         },
         5: {
             name: 'Bootstrap',
-            icon: (<i class="fab fa-bootstrap"></i>)
+            icon: "fab fa-bootstrap"
         },
         6: {
             name: 'Node.js',
-            icon: (<i class="fab fa-node-js"></i>)
+            icon: "fab fa-node-js"
         },
         7: {
             name: 'GitHub',
-            icon: (<i class="fab fa-github"></i>)
+            icon: "fab fa-github"
         },
         8: {
             name: 'Node Package Manager',
-            icon: (<i class="fab fa-npm"></i>)
+            icon: "fab fa-npm"
         }
     } 
     
-    const [open, setOpen] = useState(false);
-
-    Object.keys(icons).map((i, key)=>{
-        console.log(i);
-        console.log(key);
-        return(
-           <div className=''>
-               <Button 
-               size='lg'
-               key={key}
-               className='m-4'
-               onClick={()=>setOpen(!open)}
-               aria-expanded={open}>
-                   {i.name}
-               </Button>
-               <Collapse in={open}>
-               <div id="example-collapse-text">
-                   adsfasdfasdfasdfa
-               </div>
-               </Collapse>
-           </div>
-        )
-    })
+    // const [open, setOpen] = useState(false);
     
-    // const arr = [];
-    // for (let i=0;i<icons.length;i++){
-    //     console.log(icons[i]);
-    //    arr.push(
-    //     <div className=''>
-    //         <Button 
-    //             size='lg'
-    //             className='m-4'
-    //             onClick={()=>setOpen(!open)}
-    //             aria-expanded={open}>
-                    
-    //         </Button>
-    //         <Collapse in={open}>
-    //             <div id="example-collapse-text">
-    //                 adsfasdfasdfasdfa
-    //             </div>
-    //   </Collapse>
-    //     </div>
-    //    )
-    // }
-    // return arr;
+    const button = () => (Object.entries(icons).map(icon => (
+        <div className='d-inline-block'>
+            <CDBAnimation>
+                <Button 
+                    variant='secondary'
+                    size='lg'
+                    className='m-4'
+                    // onClick={()=>setOpen(!open)}
+                    // aria-expanded={open}
+                    >
+                        <i className={icon[1].icon}></i>
+                </Button>
+            </CDBAnimation>
+            {/* <Collapse in={open}>
+                <div className='d-flex justify-content-center'>
+                    {icon[1].name}
+                </div>
+            </Collapse> */}
+        </div>
+        )
+    ))
 
+    return(
+        <div className='d-flex flex-wrap justify-content-center mx-2'>
+            {button()}
+        </div>
+    )
 }
 
- 
-
- export default IconContainer;
+export default IconContainer;
 
