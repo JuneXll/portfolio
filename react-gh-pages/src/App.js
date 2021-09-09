@@ -7,11 +7,19 @@ import Projects from './components/pages/Projects';
 import Contact from './components/pages/Contact';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
+import background from '../src/images/background.jpeg';
 
 function App() {
+
+  const setBackground = {
+    backgroundImage: `url(${background})`,
+    backgroundSize: 'cover',
+    height: '100vh'
+  }
+
   return (
     <Router>
-      <div className='d-flex'>
+      <div className='d-flex' style={setBackground}>
         <Sidebar className='col'/>
         <Switch>
           <Container fluid className='col overflow-auto p-0'>
