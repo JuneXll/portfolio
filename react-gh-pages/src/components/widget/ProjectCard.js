@@ -1,44 +1,62 @@
 import React, { useState } from 'react';
-import ReactCardFlip from 'react-card-flip';
+import { useSpring, a } from '@react-spring/web'
 import { Image } from 'react-bootstrap';
 import { projects } from '../../projectData';
 
-const render = ()=>(
-    Object.entries(projects).map((project,index) => (
-        <Image thumbnail fluid key={`key=${index}`} src={project[1].image} className='shadow-sm'/>
-    ))
-)
-
 const ProjectCard = ()=>{
-    //Card flip
-    const [isFlipped, setIsFlipped] = useState(false);
+    //Card flip(spring)
+    const [flipped, setFlipped] = useState(false)
+    const { transform, opacity } = useSpring({
+        opacity: flipped ? 1 : 0,
+        transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
+        config: { mass: 5, tension: 500, friction: 80 },
+    })
 
-    const handleClick = ()=> {
-        setIsFlipped(!isFlipped);
+    //Hover
+    const [hover, setHover] = useState({opacity:'1', cursor:'pointer', position:'absolute', willChange: 'transform, opacity'});
+
+    const handleMouseEnter = ()=>setHover({opacity:'.50', cursor:'pointer'})
+    const handleMouseLeave = ()=>setHover({opacity:'1', cursor:'pointer'});
+    
+
+    const renderCard = (card, index) => {
+        return (
+            <div className='' onClick={() => setFlipped(state => !state)} >
+                <a.div className='col-lg-5 mx-2 my-2' style={{ opacity: opacity.to(o => 1 - o), transform }} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        
+                    <Image thumbnail fluid key={index} src={card.image} className='shadow-sm m-1' style={hover}/>
+       
+                </a.div>
+
+                <a.div className='col-lg-5 mx-2 my-2' style={{
+                    opacity,
+                    transform,
+                    rotateX: '180deg',
+                    }}>
+                    <div className='d-flex flex-column' style={{backgroundColor:'white', position:'absolute', willChange: 'transform, opacity'}}>
+                        <div className='d-flex justify-content-center'>
+                            <a href={card.github} target="_blank" alt='github' rel="noreferrer">
+                                <i className="fab fa-github"></i>
+                            </a>
+                            <a href={card.link} target="_blank" alt={card.title} rel="noreferrer">
+                                <i class="fas fa-laptop-code"></i>
+                            </a>
+                        </div>
+                        <div className='d-flex flex-column align-items-center'>
+                            <h3>{card.title}</h3>
+                            <h5>{card.subtitle}</h5>
+                        </div>
+                    </div>
+                </a.div>
+            </div>
+        )
     }
-
-    // //Hover
-    // const [hover, setHover] = useState({opacity:'1'});
-
-    // const handleMouseEnter = ()=>setHover({opacity:'.50'});
-    // const handleMouseLeave = ()=>setHover({opacity:'1'});
+    
 
     return(
-        // <div className='d-flex flex-wrap' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        //     {render(hover)}
-        // </div>
-        <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical" className='d-flex flex-wrap'>
-            <div className='col-lg-5 mx-2 my-2' onClick={handleClick}>
-                {/* <Image thumbnail fluid  src={project[1].image} className='shadow-sm' onClick={handleClick}/> */}
-                {/* <button onClick={handleClick}>Click to flip</button> */}
-                {render()}
-            </div>
-
-            <div className='col-lg-5 mx-2 my-2'>
-                This is the back of the card.
-                <button onClick={handleClick}>Click to flip</button>
-            </div>
-        </ReactCardFlip>
+        <div className='d-flex flex-wrap'>
+            {projects.map(renderCard)}
+        </div> 
     )
 }
 
@@ -46,15 +64,3 @@ export default ProjectCard;
 
 // event listener onMouseOver...set on hover for cards
 //onHover be able to see the opacity with text saying Project Name, short content, pill button 'launch' and 'github'
-
-{/* <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
-        <YOUR_FRONT_CCOMPONENT>
-          This is the front of the card.
-          <button onClick={this.handleClick}>Click to flip</button>
-        </YOUR_FRONT_CCOMPONENT>
-
-        <YOUR_BACK_COMPONENT>
-          This is the back of the card.
-          <button onClick={this.handleClick}>Click to flip</button>
-        </YOUR_BACK_COMPONENT>
-</ReactCardFlip> */}
