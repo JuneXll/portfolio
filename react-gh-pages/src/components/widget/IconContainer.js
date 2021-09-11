@@ -52,9 +52,10 @@ const IconContainer = ()=>{
         <div className='d-inline-block'>
             <CDBAnimation>
                 <Button 
-                    variant='secondary'
+                    variant='light'
                     size='lg'
                     className='m-4'
+                    style={{cursor:'default'}}
                     // onClick={()=>setOpen(!open)}
                     // aria-expanded={open}
                     >
