@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Col } from 'react-bootstrap';
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
 const Contact = ()=>{
+    const [form, setForm] = useState({name:'', email:'',message:''})
+
+    const handleSubmit = e => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", ...form })
+        })
+          .then(() => alert("Success!"))
+          .catch(error => alert(error));
+  
+        e.preventDefault();
+      };
+  
+      const handleChange = e => setForm({ [e.target.name]: e.target.value });
 
     return(
         <Container className='h-100 w-100'>
-            <main className='d-flex flex-column justify-content-center align-items-center my-5'>
+            <main className='d-flex flex-column justify-content-center align-items-center my-5' style={{backgroundColor:'white', borderRadius:'15px'}}>
 
                 <h1>Hire Me</h1>
             
@@ -36,7 +57,27 @@ const Contact = ()=>{
                 </Container>
 
                 <Container>
-
+                    <form name="contact" method="post" onSubmit={handleSubmit}>
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p>
+                            <label>
+                                Your Name: <input type="text" name="name" value={form.name} onChange={handleChange} />
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Your Email: <input type="email" name="email" value={form.email} onChange={handleChange} />
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Message: <textarea name="message" value={form.message} onChange={handleChange} />
+                            </label>
+                        </p>
+                        <p>
+                            <button type="submit">Send</button>
+                        </p>
+                    </form>
                 </Container>
 
             </main>
