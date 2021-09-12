@@ -12,17 +12,10 @@ const ProjectCard = ()=>{
         config: { mass: 5, tension: 500, friction: 80 },
     })
 
-    // //Hover
-    // const [hover, setHover] = useState({opacity:'1', cursor:'pointer', position:'absolute', willChange: 'transform, opacity'});
-
-    // const handleMouseEnter = ()=>setHover({opacity:'.50', cursor:'pointer'})
-    // const handleMouseLeave = ()=>setHover({opacity:'1', cursor:'pointer'});
-    // onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
-
     const renderCard = (card, index) => {
         return (
             <Col className='col-lx-6  col-md-12' onClick={() => setFlipped(state => !state)} >
-                <a.div className='mx-2 my-2' style={{ opacity: opacity.to(o => 1 - o), transform }} >
+                <a.div className='mx-2 my-2' style={{ opacity: opacity.to(o => 1 - o), transform, cursor:'pointer'}} >
         
                     <Image thumbnail fluid key={index} src={card.image} className='shadow-sm m-1' />
        
@@ -32,6 +25,7 @@ const ProjectCard = ()=>{
                     opacity,
                     transform,
                     rotateX: '180deg',
+                    cursor:'pointer'
                     }}>
 
                     <Image thumbnail fluid key={index} src={card.image} className='shadow-sm m-1' style={{opacity:'.70'}} />
@@ -74,5 +68,3 @@ const ProjectCard = ()=>{
 
 export default ProjectCard;
 
-// event listener onMouseOver...set on hover for cards
-//onHover be able to see the opacity with text saying Project Name, short content, pill button 'launch' and 'github'
