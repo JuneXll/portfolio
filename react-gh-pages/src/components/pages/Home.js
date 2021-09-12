@@ -17,7 +17,7 @@ const Home = ()=>{
 
                     <p className='px-5' style={{textIndent:'15px'}}>I am a Miami based Web Developer. As a novice developer, I am continuously learning new techniques to sharpen my skills. I strive for quality and excellence. I enjoy providing structure and order to all of my projects and maximizing user experience. Working on a team is always a rewarding endeavor, but I am definitely not afraid to get down to the nitty gritty and work on projects independently.</p>
 
-                    <Button href='https://docs.google.com/document/d/1BRJwryHRSNR7SiqSzSzGPfpwgCMGXSiTb02sNJKKSms/edit?usp=sharing' target='_blank' variant='outline-secondary' size='sm'><i class="fas fa-file-download"></i> Download my Resume</Button>
+                    <Button href='https://docs.google.com/document/d/1BRJwryHRSNR7SiqSzSzGPfpwgCMGXSiTb02sNJKKSms/edit?usp=sharing' target='_blank' variant='outline-dark' size='sm'><i class="fas fa-file-download"></i> Download my Resume</Button>
                 </div>
             </div>
         </Container>
