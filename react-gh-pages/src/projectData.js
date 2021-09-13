@@ -1,9 +1,11 @@
 import travlr from './images/travlr.png';
 import recipe from './images/recipe-cookbook.png';
+import store from './images/store.png';
 import atmos from './images/atmos.png';
 import planner from './images/work-planner.png';
 import dash from './images/weather.dash.png';
 import password from './images/password-generator.png';
+import team from './images/team-generator.png';
 
 export const projects = [
     {
@@ -21,6 +23,13 @@ export const projects = [
         link:'https://cryptic-dusk-68462.herokuapp.com/'
     },
     {
+        title: 'Redux-Store',
+        subtitle: 'HTML, CSS, JavaScript, Redux',
+        github: 'https://github.com/JuneXll/redux-store',
+        image: store,
+        link: ' https://sheltered-ravine-49609.herokuapp.com/'
+    },
+    {
         title: 'Atmos',
         subtitle: 'JavaScript, jQuery, Bulma',
         github: 'https://github.com/vyncent-t/atmosphere-project',
@@ -36,7 +45,7 @@ export const projects = [
     },
     {
         title: 'Weather Dashboard',
-        subtitle: 'HTML, CSS, Bootstrap',
+        subtitle: 'HTML, CSS, JavaScript, Bootstrap',
         github: 'https://github.com/JuneXll/Weather-Dashboard',
         image: dash,
         link: 'https://junexll.github.io/Weather-Dashboard/'
@@ -47,5 +56,14 @@ export const projects = [
         github: 'https://github.com/JuneXll/password-generator',
         image: password,
         link: 'https://junexll.github.io/password-generator/'
+    },
+    {
+        title: 'Team-Generator',
+        subtitle: 'HTML, JavaScript, Node, Jest',
+        github: 'https://github.com/JuneXll/team-profile-generator',
+        image: team,
+        link: 'https://drive.google.com/file/d/1PaZVo4pL7wvhZg_T2npe7SHSIc3T3FaY/view'
     }
 ]
+
+

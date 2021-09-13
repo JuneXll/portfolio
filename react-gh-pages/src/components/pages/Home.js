@@ -15,7 +15,7 @@ const Home = ()=>{
                         <h1 className='mb-3'>Hi there, I'm June.</h1>
                     </CDBAnimation>
 
-                    <p className='px-5' style={{textIndent:'15px'}}>I am a Miami based Web Developer. As a novice developer, I am continuously learning new techniques to sharpen my skills. I strive for quality and excellence. I enjoy providing structure and order to all of my projects and maximizing user experience. Working on a team is always a rewarding endeavor, but I am definitely not afraid to get down to the nitty gritty and work on projects independently.</p>
+                    <p className='px-5' style={{textIndent:'15px'}}>Web Developer leveraging a background in sales to provide insight on how end-users interact with websites and software platforms. Earned a certificate in Full Stack Web Development from the University of Miami Coding Boot Camp. Innovative problem-solver with a passion for developing applications that are focused on design and development. Strengths in leadership, teamwork, and converting ideas into complete projects.</p>
 
                     <Button href='https://docs.google.com/document/d/1BRJwryHRSNR7SiqSzSzGPfpwgCMGXSiTb02sNJKKSms/edit?usp=sharing' target='_blank' variant='outline-dark' size='sm'><i class="fas fa-file-download"></i> Download my Resume</Button>
                 </div>
